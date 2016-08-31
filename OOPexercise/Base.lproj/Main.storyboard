@@ -8,7 +8,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OOPexcercise" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OOPexercise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -134,6 +134,18 @@
                                     <constraint firstAttribute="height" constant="76" id="co1-LM-rOK"/>
                                 </constraints>
                             </imageView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlm-zr-TBQ">
+                                <rect key="frame" x="180" y="382" width="240" height="47"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="N6f-Nf-Mfj"/>
+                                    <constraint firstAttribute="height" constant="47" id="yWl-M5-MY5"/>
+                                </constraints>
+                                <state key="normal" image="RESTART-1"/>
+                                <connections>
+                                    <action selector="pressRestart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9NS-2f-Uk9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -155,10 +167,12 @@
                             <constraint firstItem="Oex-OR-fYU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="26" id="VmF-Vo-DiA"/>
                             <constraint firstItem="Pck-pn-O3E" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="X7h-Vd-oiG"/>
                             <constraint firstItem="wvK-Jy-Cgv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="YXQ-MZ-nBc"/>
+                            <constraint firstItem="jlm-zr-TBQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b0z-7Y-mpF"/>
                             <constraint firstItem="GOm-6n-RaN" firstAttribute="top" secondItem="j6T-Vw-rff" secondAttribute="bottom" constant="13" id="bLP-xd-TvB"/>
                             <constraint firstItem="wvK-Jy-Cgv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="bTh-vw-Iqv"/>
                             <constraint firstItem="Sbn-kD-lmE" firstAttribute="top" secondItem="Qk1-fE-4xD" secondAttribute="bottom" constant="6" id="eFd-id-7K6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8u6-Wp-AdG" secondAttribute="trailing" constant="117" id="fIF-kE-0gk"/>
+                            <constraint firstItem="hJm-o1-1wV" firstAttribute="top" secondItem="jlm-zr-TBQ" secondAttribute="bottom" constant="113" id="gJC-Gv-v7T"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="GOm-6n-RaN" secondAttribute="bottom" constant="54" id="hVg-kx-Qvr"/>
                             <constraint firstAttribute="trailing" secondItem="hJm-o1-1wV" secondAttribute="trailing" id="jlN-4f-1mN"/>
                             <constraint firstItem="hJm-o1-1wV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jz3-PJ-5dz"/>
@@ -179,6 +193,7 @@
                         <outlet property="p2Img" destination="GOm-6n-RaN" id="8xp-nq-hGI"/>
                         <outlet property="p2Tombstone" destination="Qk1-fE-4xD" id="MVm-4B-h3L"/>
                         <outlet property="p2hpLbl" destination="8u6-Wp-AdG" id="CyC-WF-Kfs"/>
+                        <outlet property="restartBtn" destination="jlm-zr-TBQ" id="kdP-Ah-zbG"/>
                         <outlet property="textLbl" destination="Sbn-kD-lmE" id="Ebg-LP-dpW"/>
                     </connections>
                 </viewController>
@@ -189,6 +204,7 @@
     </scenes>
     <resources>
         <image name="GAMEOVER" width="520" height="77"/>
+        <image name="RESTART-1" width="424" height="83"/>
         <image name="bg" width="1024" height="677"/>
         <image name="enemy" width="241" height="348"/>
         <image name="ground" width="1024" height="106"/>

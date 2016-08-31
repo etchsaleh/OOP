@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  OOPexcercise
+//  OOPexercise
 //
 //  Created by Hesham Saleh on 8/30/16.
 //  Copyright © 2016 Hesham Saleh. All rights reserved.
@@ -31,6 +31,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var p2Button: UIButton!
     
+    @IBOutlet weak var restartBtn: UIButton!
+    
     var player1: Character!
     
     var player2: Character!
@@ -59,17 +61,13 @@ class ViewController: UIViewController {
         
         if !player2.isAlive {
             sound.stop()
+            
             gameoverMusic()
-            lose.play()
-            p2hpLbl.text = ""
-            p1hpLbl.text = ""
-            textLbl.text = "Great job, \(player1.name)! 😄"
+            
+            endGame(player1.name)
             
             p2Img.hidden = true
             p2Tombstone.hidden = false
-            p1Button.hidden = true
-            p2Button.hidden = true
-            gameover.hidden = false
         }
         
         self.p1Button.enabled = false
@@ -80,8 +78,6 @@ class ViewController: UIViewController {
     @IBAction func p2Btn(sender: AnyObject) {
         
         btnSound()
-        
-        btn.play()
         
         if player1.attack(player2.attackPower) {
             textLbl.text = "\(player2.name) attacked \(player1.name)! -\(player2.attackPower)HP"
@@ -95,17 +91,14 @@ class ViewController: UIViewController {
         
         if !player1.isAlive {
             sound.stop()
+            
             gameoverMusic()
-            lose.play()
-            p1hpLbl.text = ""
-            p2hpLbl.text = ""
-            textLbl.text = "Well done, \(player2.name)! 😄"
+            
+            endGame(player2.name)
             
             p1Img.hidden = true
             p1Tombstone.hidden = false
-            p1Button.hidden = true
-            p2Button.hidden = true
-            gameover.hidden = false
+            
         }
         
         self.p2Button.enabled = false
@@ -122,10 +115,26 @@ class ViewController: UIViewController {
     }
     
     func delay() {
-        NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector: "enableButton", userInfo: nil, repeats: false)
+        NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "enableButton", userInfo: nil, repeats: false)
     }
     
-    func music() {
+    @IBAction func pressRestart(sender: AnyObject) {
+        
+        btn.play()
+        sound.play()
+        p1Button.hidden = false
+        p2Button.hidden = false
+        gameover.hidden = true
+        p1Tombstone.hidden = true
+        p2Tombstone.hidden = true
+        p2Img.hidden = false
+        p1Img.hidden = false
+        
+        newGame()
+        
+    }
+    
+    func playBackgroundMusic() {
         
         let path = NSBundle.mainBundle().pathForResource("bgMusic", ofType: "mp3")
         
@@ -137,6 +146,12 @@ class ViewController: UIViewController {
         } catch let err as NSError {
             print(err.debugDescription)
         }
+        
+        sound.play()
+        
+        sound.numberOfLoops = -1 //Continuous Loop.
+        
+        sound.volume = 0.3 //Volume from 0.0 to 1.0.
     }
     
     func btnSound() {
@@ -151,6 +166,8 @@ class ViewController: UIViewController {
         } catch let err as NSError {
             print(err.debugDescription)
         }
+        
+        btn.play()
     }
     
     func gameoverMusic() {
@@ -165,23 +182,32 @@ class ViewController: UIViewController {
         } catch let err as NSError {
             print(err.debugDescription)
         }
+        
+        lose.play()
 
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    func endGame(name: String) {
         
-        music()
+        p1hpLbl.text = ""
+        p2hpLbl.text = ""
+        textLbl.text = "Well done, \(name)! 😄"
         
-        sound.play()
+        p1Button.hidden = true
+        p2Button.hidden = true
+        gameover.hidden = false
+        restartBtn.hidden = false
+    }
+    
+    func newGame() {
         
-        sound.numberOfLoops = -1 //Continuous Loop.
+        restartBtn.hidden = true
         
-        sound.volume = 0.3 //Volume from 0.0 to 1.0.
+        playBackgroundMusic()
         
         player1 = Character(name: "Etch", hp: 120, attackPower: 25)
         
-        player2 = Character(name: "Hoss", hp: 140, attackPower: 25)
+        player2 = Character(name: "Hoss", hp: 120, attackPower: 25)
         
         p1hpLbl.text = "\(player1.hp) HP"
         
@@ -190,4 +216,11 @@ class ViewController: UIViewController {
         textLbl.text = "Press [ATTACK] to start."
         
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        newGame()
+    }
+    
 }

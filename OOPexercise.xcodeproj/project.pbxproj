@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		472E0B3E1D763EB10066E011 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472E0B3D1D763EB10066E011 /* Game.swift */; settings = {ASSET_TAGS = (); }; };
 		472E0B421D767DC20066E011 /* btn.wav in Resources */ = {isa = PBXBuildFile; fileRef = 472E0B411D767DC20066E011 /* btn.wav */; settings = {ASSET_TAGS = (); }; };
 		472E0B441D7685260066E011 /* bgMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 472E0B431D7685260066E011 /* bgMusic.mp3 */; settings = {ASSET_TAGS = (); }; };
 		475C4BD61D769BBB00DBB01C /* lose.wav in Resources */ = {isa = PBXBuildFile; fileRef = 475C4BD51D769BBB00DBB01C /* lose.wav */; settings = {ASSET_TAGS = (); }; };
@@ -20,11 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		472E0B3D1D763EB10066E011 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Game.swift; path = ../Game.swift; sourceTree = "<group>"; };
 		472E0B411D767DC20066E011 /* btn.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = btn.wav; sourceTree = "<group>"; };
 		472E0B431D7685260066E011 /* bgMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bgMusic.mp3; sourceTree = "<group>"; };
 		475C4BD51D769BBB00DBB01C /* lose.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = lose.wav; sourceTree = "<group>"; };
-		47B1BF121D75F2DC005002E4 /* OOPexcercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OOPexcercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		47B1BF121D75F2DC005002E4 /* OOPexercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OOPexercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47B1BF151D75F2DC005002E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47B1BF171D75F2DC005002E4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		47B1BF1A1D75F2DC005002E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -48,7 +46,7 @@
 		47B1BF091D75F2DC005002E4 = {
 			isa = PBXGroup;
 			children = (
-				47B1BF141D75F2DC005002E4 /* OOPexcercise */,
+				47B1BF141D75F2DC005002E4 /* OOPexercise */,
 				47B1BF131D75F2DC005002E4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,12 +54,12 @@
 		47B1BF131D75F2DC005002E4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				47B1BF121D75F2DC005002E4 /* OOPexcercise.app */,
+				47B1BF121D75F2DC005002E4 /* OOPexercise.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		47B1BF141D75F2DC005002E4 /* OOPexcercise */ = {
+		47B1BF141D75F2DC005002E4 /* OOPexercise */ = {
 			isa = PBXGroup;
 			children = (
 				472E0B411D767DC20066E011 /* btn.wav */,
@@ -69,22 +67,22 @@
 				472E0B431D7685260066E011 /* bgMusic.mp3 */,
 				47B1BF151D75F2DC005002E4 /* AppDelegate.swift */,
 				47B1BF271D75F376005002E4 /* Character.swift */,
-				472E0B3D1D763EB10066E011 /* Game.swift */,
 				47B1BF171D75F2DC005002E4 /* ViewController.swift */,
 				47B1BF191D75F2DC005002E4 /* Main.storyboard */,
 				47B1BF1C1D75F2DC005002E4 /* Assets.xcassets */,
 				47B1BF1E1D75F2DC005002E4 /* LaunchScreen.storyboard */,
 				47B1BF211D75F2DC005002E4 /* Info.plist */,
 			);
+			name = OOPexercise;
 			path = OOPexcercise;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		47B1BF111D75F2DC005002E4 /* OOPexcercise */ = {
+		47B1BF111D75F2DC005002E4 /* OOPexercise */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 47B1BF241D75F2DC005002E4 /* Build configuration list for PBXNativeTarget "OOPexcercise" */;
+			buildConfigurationList = 47B1BF241D75F2DC005002E4 /* Build configuration list for PBXNativeTarget "OOPexercise" */;
 			buildPhases = (
 				47B1BF0E1D75F2DC005002E4 /* Sources */,
 				47B1BF0F1D75F2DC005002E4 /* Frameworks */,
@@ -94,9 +92,9 @@
 			);
 			dependencies = (
 			);
-			name = OOPexcercise;
+			name = OOPexercise;
 			productName = OOPexcercise;
-			productReference = 47B1BF121D75F2DC005002E4 /* OOPexcercise.app */;
+			productReference = 47B1BF121D75F2DC005002E4 /* OOPexercise.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -114,7 +112,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 47B1BF0D1D75F2DC005002E4 /* Build configuration list for PBXProject "OOPexcercise" */;
+			buildConfigurationList = 47B1BF0D1D75F2DC005002E4 /* Build configuration list for PBXProject "OOPexercise" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -127,7 +125,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				47B1BF111D75F2DC005002E4 /* OOPexcercise */,
+				47B1BF111D75F2DC005002E4 /* OOPexercise */,
 			);
 		};
 /* End PBXProject section */
@@ -156,7 +154,6 @@
 				47B1BF281D75F376005002E4 /* Character.swift in Sources */,
 				47B1BF181D75F2DC005002E4 /* ViewController.swift in Sources */,
 				47B1BF161D75F2DC005002E4 /* AppDelegate.swift in Sources */,
-				472E0B3E1D763EB10066E011 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,8 +268,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = OOPexcercise/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hyperspace.OOPexcercise;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hyperspace.OOPexercise;
+				PRODUCT_NAME = OOPexercise;
 			};
 			name = Debug;
 		};
@@ -282,15 +279,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = OOPexcercise/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hyperspace.OOPexcercise;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hyperspace.OOPexercise;
+				PRODUCT_NAME = OOPexercise;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		47B1BF0D1D75F2DC005002E4 /* Build configuration list for PBXProject "OOPexcercise" */ = {
+		47B1BF0D1D75F2DC005002E4 /* Build configuration list for PBXProject "OOPexercise" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				47B1BF221D75F2DC005002E4 /* Debug */,
@@ -299,7 +296,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		47B1BF241D75F2DC005002E4 /* Build configuration list for PBXNativeTarget "OOPexcercise" */ = {
+		47B1BF241D75F2DC005002E4 /* Build configuration list for PBXNativeTarget "OOPexercise" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				47B1BF251D75F2DC005002E4 /* Debug */,
