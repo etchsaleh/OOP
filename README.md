@@ -1,2 +1,2 @@
-# OOP
-Swift OOP practice.
+# Swift
+Small iOS app projects
